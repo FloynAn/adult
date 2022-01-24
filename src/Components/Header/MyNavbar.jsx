@@ -206,8 +206,8 @@ export default function MyNavbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="secondary">
-        <Toolbar>
+      <AppBar position="static" color="secondary" >
+        <Toolbar style={{display:'flex', alignContent:'baseline'}}>
           <Typography
             variant="h6"
             noWrap
