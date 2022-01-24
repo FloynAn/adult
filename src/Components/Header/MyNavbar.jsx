@@ -187,7 +187,7 @@ keepMounted
             <NotificationsIcon /> 
           </Badge> 
         </IconButton> */} 
-        <p>Notifications</p> 
+        {/* <p>Notifications</p>  */}
       </MenuItem> 
       <MenuItem onClick={handleProfileMenuOpen}> 
         <IconButton 
@@ -216,7 +216,7 @@ keepMounted
              
             sx={{ display: { xs: 'none', sm: 'block' } }} 
           > 
-          <img width='115px' src={Logo} alt="" /> 
+          <img width='110px' src={Logo} alt="" /> 
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
