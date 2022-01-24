@@ -1,7 +1,6 @@
 {
   "products": [
     {
-<<<<<<< HEAD
       "title": "Блестки для жопы",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
       "price": 1000,
@@ -32,14 +31,6 @@
       "type": "condoms",
       "description": "Реалистичная текстура имитирует естественную смазку. 200 мл",
       "id": 4
-=======
-      "title": "kakka",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
-      "price": 8383,
-      "type": "slsl",
-      "description": "skkss",
-      "id": 1
->>>>>>> eba24f7b491889eb195997325db905a7ec756327
     }
   ]
 }
