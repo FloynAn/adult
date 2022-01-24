@@ -14,6 +14,7 @@ const MyRoutes = () => {
 
     // const {useAuth} = useContext(productContext)
     // const currentUser = useAuth()
+    // console.log(currentUser, "hek");
     return (
         <ProductsContextProvider>
             <BrowserRouter>
