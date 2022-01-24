@@ -29,7 +29,7 @@ export default function AddProduct() {
 
 
     const handleSave = () => {
-        if(!values.image) values.image = 'https://content.onliner.by/news/1100x5616/472baa6904f365c4bae96d6b77c13010.jpeg'
+        if(!values.image) values.image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU'
         addProduct({...values, price: +values.price})
         navigate('/')
     }

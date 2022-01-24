@@ -14,7 +14,7 @@ const ProductDetail = () => {
     return (
               <Paper variant="outlined">
                     <Typography variant='h2' style={{textAlign:'center'}}>
-                        Detail
+                        Описание
                     </Typography>
                     {
                         detail? (
