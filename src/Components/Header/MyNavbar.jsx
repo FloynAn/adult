@@ -232,13 +232,13 @@ keepMounted
  
           <Box sx={{ flexGrow: 1 }} /> 
           {currentUser?.email ==="admin@gmail.com" ? ( 
-            <Link to="/add" style={{color:"white"}}> 
+            <Link to="/add" style={{color:"white", marginRight: '1%'}}> 
               <AddIcon/> 
             </Link> 
           ):(null)} 
           { 
             currentUser?( 
-              <LogoutIcon style={{color:"white"}}
+              <LogoutIcon style={{color:"white", marginRight: '1%'}}
               variant='success'  
               disabled={!currentUser}  
               onClick={handleLogout}
