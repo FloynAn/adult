@@ -216,14 +216,14 @@ keepMounted
              
             sx={{ display: { xs: 'none', sm: 'block' } }} 
           > 
-          <img width='110px' src={Logo} alt="" /> 
+          <img width='115px' src={Logo} alt="" /> 
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
               <SearchIcon /> 
             </SearchIconWrapper> 
             <StyledInputBase 
-              placeholder="Search…" 
+              placeholder="Поиск..." 
               inputProps={{ 'aria-label': 'search' }} 
               value={searchVal} 
               onChange={handleValue} 
@@ -238,10 +238,10 @@ keepMounted
           ):(null)} 
           { 
             currentUser?( 
-              <LogoutIcon  
+              <LogoutIcon style={{color:"white"}}
               variant='success'  
               disabled={!currentUser}  
-              onClick={handleLogout} 
+              onClick={handleLogout}
               > 
                Log out 
               </LogoutIcon> 
