@@ -6,14 +6,21 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Slider } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
-
-// const Item = styled(Paper)(({ theme }) => ({
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    flexGrow: 1
+  };
 
 
 const Sidebar = () => {
@@ -22,7 +29,11 @@ const Sidebar = () => {
     const {getProducts} = useContext(productContext)
     const [type, setType] = useState(search.get('type') || '')
     const [price, setPrice] = useState(search.get('price_lte') || '')
-
+    
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    
     const filterProducts = (key, value) => {
         search.set(key, value)
         let newPath = `${window.location.pathname}?${search.toString()}`
@@ -57,7 +68,15 @@ const Sidebar = () => {
     }
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <div>
+        <Button onClick={handleOpen}>Open modal</Button>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
             <Grid container spacing={2}>
                 <Grid item md={3}>
                     <Paper elevation={2}>
@@ -91,7 +110,7 @@ const Sidebar = () => {
                             onChange={(e) => filterProducts
                             ('price_lte', e.target.value)}
                             valueLabelDisplay='auto'
-                            max={300000}
+                            max={30000}
                             step={100}
                            
                             />
@@ -99,7 +118,7 @@ const Sidebar = () => {
                         <Button 
                             onClick={resetFilter} 
                             variant='contained' 
-                            color='success'
+                            color='secondary'
                         >
                             Сбросить
                         </Button>
@@ -107,6 +126,8 @@ const Sidebar = () => {
                 </Grid>
             </Grid>
         </Box>
+        </Modal>
+        </div>
     );
 };
 
