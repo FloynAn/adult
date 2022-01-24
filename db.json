@@ -1,5 +1,12 @@
 {
   "products": [
-
+    {
+      "title": "kakka",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "price": 8383,
+      "type": "slsl",
+      "description": "skkss",
+      "id": 1
+    }
   ]
 }

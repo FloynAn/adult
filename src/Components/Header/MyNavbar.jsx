@@ -216,14 +216,14 @@ keepMounted
              
             sx={{ display: { xs: 'none', sm: 'block' } }} 
           > 
-          <img width='110px' src={Logo} alt="" /> 
+          <img width='115px' src={Logo} alt="" /> 
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
               <SearchIcon /> 
             </SearchIconWrapper> 
             <StyledInputBase 
-              placeholder="Search…" 
+              placeholder="Поиск..." 
               inputProps={{ 'aria-label': 'search' }} 
               value={searchVal} 
               onChange={handleValue} 
@@ -232,16 +232,16 @@ keepMounted
  
           <Box sx={{ flexGrow: 1 }} /> 
           {currentUser?.email ==="admin@gmail.com" ? ( 
-            <Link to="/add" style={{color:"white"}}> 
+            <Link to="/add" style={{color:"white", marginRight: '1%'}}> 
               <AddIcon/> 
             </Link> 
           ):(null)} 
           { 
             currentUser?( 
-              <LogoutIcon  
+              <LogoutIcon style={{color:"white", marginRight: '1%'}}
               variant='success'  
               disabled={!currentUser}  
-              onClick={handleLogout} 
+              onClick={handleLogout}
               > 
                Log out 
               </LogoutIcon> 
