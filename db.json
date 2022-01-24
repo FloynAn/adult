@@ -1,20 +1,5 @@
 {
   "products": [
-    {
-      "title": "hggfh",
-      "image": "https://content.onliner.by/news/1100x5616/472baa6904f365c4bae96d6b77c13010.jpeg",
-      "price": 0,
-      "type": "",
-      "description": "",
-      "id": 1
-    },
-    {
-      "title": "awe",
-      "image": "https://content.onliner.by/news/1100x5616/472baa6904f365c4bae96d6b77c13010.jpeg",
-      "price": 777,
-      "type": "awe",
-      "description": "awe",
-      "id": 2
-    }
+
   ]
 }
