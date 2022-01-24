@@ -132,157 +132,150 @@ export default function MyNavbar() {
         horizontal: 'right',
       }}
       id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <Link to='/login'>
-        <MenuItem>Login</MenuItem>
-      </Link>
-
-      <Link to='/register'>
-        <MenuItem>Register</MenuItem>
-      </Link>
-      
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
-  const mobileMenuId = 'primary-search-account-menu-mobile';
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton> */}
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="secondary" >
-        <Toolbar style={{display:'flex', alignContent:'baseline'}}>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-          <img width='115px' src={Logo} alt="" />
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-              value={searchVal}
-              onChange={handleValue}
-            />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
-          {currentUser?.email ==="admin@gmail.com" ? (
-            <Link to="/add">
-              <AddIcon color='inherit'/>
-            </Link>
-          ):(null)}
-          {
-            currentUser?(
-              <LogoutIcon 
-              variant='success' 
-              disabled={!currentUser} 
-              onClick={handleLogout}
-              >
-               Log out
-              </LogoutIcon>
-            ) : (null)
-          }
-          {currentUser?.email}
-          <Link to="/cart" style={{color:"white"}}>
-            <IconButton color='inherit'>
-              <Badge badgeContent={cartLength} color='secondary'>
-                <ShoppingCartIcon/>
-              </Badge>
-            </IconButton>
-          </Link>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
+keepMounted 
+      transformOrigin={{ 
+        vertical: 'top', 
+        horizontal: 'right', 
+      }} 
+      open={isMenuOpen} 
+      onClose={handleMenuClose} 
+    > 
+      <Link to='/login'> 
+        <MenuItem>Login</MenuItem> 
+      </Link> 
+ 
+      <Link to='/register'> 
+        <MenuItem>Register</MenuItem> 
+      </Link> 
+       
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem> 
+    </Menu> 
+  ); 
+ 
+  const mobileMenuId = 'primary-search-account-menu-mobile'; 
+  const renderMobileMenu = ( 
+    <Menu 
+      anchorEl={mobileMoreAnchorEl} 
+      anchorOrigin={{ 
+        vertical: 'top', 
+        horizontal: 'right', 
+      }} 
+      id={mobileMenuId} 
+      keepMounted 
+      transformOrigin={{ 
+        vertical: 'top', 
+        horizontal: 'right', 
+      }} 
+      open={isMobileMenuOpen} 
+      onClose={handleMobileMenuClose} 
+    > 
+      <MenuItem> 
+        {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit"> 
+          <Badge badgeContent={4} color="error"> 
+            <MailIcon /> 
+          </Badge> 
+        </IconButton> 
+        <p>Messages</p> 
+      </MenuItem> 
+      <MenuItem> 
+        <IconButton 
+          size="large" 
+          aria-label="show 17 new notifications" 
+          color="inherit" 
+        > 
+          <Badge badgeContent={17} color="error"> 
+            <NotificationsIcon /> 
+          </Badge> 
+        </IconButton> */} 
+        {/* <p>Notifications</p>  */}
+      </MenuItem> 
+      <MenuItem onClick={handleProfileMenuOpen}> 
+        <IconButton 
+          size="large" 
+          aria-label="account of current user" 
+          aria-controls="primary-search-account-menu" 
+          aria-haspopup="true" 
+          color="inherit" 
+        > 
+          <AccountCircle /> 
+        </IconButton> 
+        <p>Profile</p> 
+      </MenuItem> 
+    </Menu> 
+  ); 
+ 
+  return ( 
+    <Box sx={{ flexGrow: 1 }}> 
+ 
+      <AppBar position="static" color="secondary"> 
+        <Toolbar> 
+          <Typography 
+            variant="h6" 
+            noWrap 
+            component="div" 
+             
+            sx={{ display: { xs: 'none', sm: 'block' } }} 
+          > 
+          <img width='110px' src={Logo} alt="" /> 
+          </Typography> 
+          <Search> 
+            <SearchIconWrapper> 
+              <SearchIcon /> 
+            </SearchIconWrapper> 
+            <StyledInputBase 
+              placeholder="Search…" 
+              inputProps={{ 'aria-label': 'search' }} 
+              value={searchVal} 
+              onChange={handleValue} 
+            /> 
+          </Search> 
+ 
+          <Box sx={{ flexGrow: 1 }} /> 
+          {currentUser?.email ==="admin@gmail.com" ? ( 
+            <Link to="/add" style={{color:"white"}}> 
+              <AddIcon/> 
+            </Link> 
+          ):(null)} 
+          { 
+            currentUser?( 
+              <LogoutIcon  
+              variant='success'  
+              disabled={!currentUser}  
+              onClick={handleLogout} 
+              > 
+               Log out 
+              </LogoutIcon> 
+            ) : (null) 
+          } 
+          {currentUser?.email} 
+ 
+            <IconButton 
+              size="large" 
+              edge="end" 
+              aria-label="account of current user" 
+              aria-controls={menuId} 
+              aria-haspopup="true" 
+              onClick={handleProfileMenuOpen} 
+              color="inherit" 
+            > 
+              <AccountCircle /> 
+ 
+                </IconButton> 
+                {currentUser?.email !== "admin@gmail.com" ? ( 
+                <Link to="/cart" style={{color:"white"}}> 
+                  <IconButton color='inherit'> 
+              <Badge badgeContent={cartLength} color='secondary'> 
+                <ShoppingCartIcon/> 
+              </Badge> 
+            </IconButton> 
+          </Link> 
+                ) : (null)} 
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}> 
+          </Box> 
+ 
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}> 
+            <IconButton 
+              size="large" 
               aria-label="show more"
               aria-controls={mobileMenuId}
               aria-haspopup="true"
