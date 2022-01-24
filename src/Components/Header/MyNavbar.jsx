@@ -216,7 +216,7 @@ keepMounted
              
             sx={{ display: { xs: 'none', sm: 'block' } }} 
           > 
-          <img width='415px' src={Logo} alt="" /> 
+          <img width='115px' src={Logo} alt="" /> 
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
