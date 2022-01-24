@@ -48,10 +48,10 @@ export default function AddProduct() {
       }}
     >
         <Paper elevation={3}>
-            <h1 style={{textAlign:'center'}}>Add product</h1>
+            <h1 style={{textAlign:'center'}}>Добавить</h1>
             <div style={{display:'flex', justifyContent: 'space-around', color:'black'}}>
                 <div>
-                    <img style={{width: '400px'}} src={values.image ? values.image: 'https://content.onliner.by/news/1100x5616/472baa6904f365c4bae96d6b77c13010.jpeg'} alt="product image" />
+                    <img style={{width: '400px'}} src={values.image ? values.image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU'} alt="product image" />
                 </div>
                 <div
                     style={{
@@ -74,7 +74,7 @@ export default function AddProduct() {
                                 onChange={handleInp} 
                                 value={values.title} 
                                 variant='outlined' 
-                                label='Title' 
+                                label='Наименование' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -82,7 +82,7 @@ export default function AddProduct() {
                                 onChange={handleInp} 
                                 value={values.image} 
                                 variant='outlined' 
-                                label='Image' 
+                                label='Фото' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -90,7 +90,7 @@ export default function AddProduct() {
                                 onChange={handleInp} 
                                 value={values.type} 
                                 variant='outlined' 
-                                label='Type' 
+                                label='Категория' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -98,7 +98,7 @@ export default function AddProduct() {
                                 onChange={handleInp} 
                                 value={values.price} 
                                 variant='outlined' 
-                                label='Price' 
+                                label='Цена' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -106,15 +106,15 @@ export default function AddProduct() {
                                 onChange={handleInp} 
                                 value={values.description} 
                                 variant='outlined' 
-                                label='Description' 
+                                label='Описание' 
                             />
                         </form>
                         <Button 
                             variant='contained' 
-                            color='success'
+                            color='secondary'
                             onClick={handleSave}
                         >
-                            Add
+                            Добавить
                         </Button>
                 </div>
             </div>

@@ -216,6 +216,7 @@ const ProductsContextProvider = ({children}) => {
         
         return currentUser
     }
+    
 
 
     return (

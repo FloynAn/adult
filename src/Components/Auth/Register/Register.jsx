@@ -31,7 +31,7 @@ export default function Register() {
     const{signUp, useAuth} = React.useContext(productContext)
 
     const currentUser = useAuth()
-
+  console.log(currentUser,"bha");
     const navigate = useNavigate()
 
 

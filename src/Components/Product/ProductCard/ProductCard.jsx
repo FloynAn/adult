@@ -13,27 +13,44 @@ import { productContext } from '../../../Contexts/ProductsContext';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
+
 export default function ProductCard({item}) {
 
-  const {deleteProduct, addProductInCart, checkProductInCart} = React.useContext(productContext)
+  const {deleteProduct, addProductInCart, checkProductInCart, useAuth} = React.useContext(productContext)
+  const currentUser = useAuth()
+  console.log(currentUser);
 
   let icons = (
-    <CardActions disableSpacing>
-      <Link to={`edit/${item.id}`}> 
-        <IconButton>
-          <EditIcon/>
-       </IconButton>
-      </Link>
-      <IconButton onClick={() => deleteProduct(item.id)}>
-          <DeleteIcon/>
-       </IconButton>
-       <IconButton 
+    <CardActions disableSpacing style={{display: 'flex', justifyContent:'space-between'}}>
+
+      
+            {currentUser?.email === "admin@gmail.com" ? ( 
+              <>
+            <CardActions disableSpacing> 
+            <Link to={`edit/${item.id}`}>  
+              <IconButton> 
+                <EditIcon/> 
+             </IconButton> 
+            </Link> 
+            <IconButton onClick={() => deleteProduct(item.id)}> 
+                <DeleteIcon/> 
+             </IconButton>  
+          </CardActions>
+          </>
+           
+            ) : 
+            <>
+            <IconButton 
           aria-label='share'       
           onClick={() => addProductInCart(item)}
           color = {checkProductInCart(item.id) ? 'secondary' : 'inherit'}
-       >
+          >
          <ShoppingCartIcon/>
-       </IconButton>
+         </IconButton>
+         </>
+
+    
+       }
     </CardActions>
   )
   return (
@@ -43,7 +60,7 @@ export default function ProductCard({item}) {
           component="img"
           height="250"
           image={item.image}
-          alt="green iguana"
+          alt="18+"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
