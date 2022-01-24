@@ -1,12 +1,45 @@
 {
   "products": [
     {
+<<<<<<< HEAD
+      "title": "Блестки для жопы",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "price": 1000,
+      "type": "cosmetics",
+      "description": "Потрясающие блестки в форме звездочек сделают любой секс незабываемым",
+      "id": 1
+    },
+    {
+      "title": "Ролевой костюм",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "price": 19000,
+      "type": "accessories",
+      "description": "Эффектное эротическое белье из эластичного сетчатого материала очень приятного на ощупь",
+      "id": 2
+    },
+    {
+      "title": "Секс путеводитель",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "price": 800,
+      "type": "games",
+      "description": "Уникальный дневник и планировщик ваших приключений в постели",
+      "id": 3
+    },
+    {
+      "title": "Лубрикант",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "price": 1000,
+      "type": "condoms",
+      "description": "Реалистичная текстура имитирует естественную смазку. 200 мл",
+      "id": 4
+=======
       "title": "kakka",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
       "price": 8383,
       "type": "slsl",
       "description": "skkss",
       "id": 1
+>>>>>>> eba24f7b491889eb195997325db905a7ec756327
     }
   ]
 }

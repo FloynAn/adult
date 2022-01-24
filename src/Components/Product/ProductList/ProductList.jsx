@@ -44,8 +44,8 @@ export default function ProductList() {
     }
 
   return (
-    <Box sx={{ flexGrow: 1, margin: 4 }}>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Box sx={{ flexGrow: 1, margin: 4}} style={{background: 'f4e0ec'}}>
+      <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 8, md: 12}}>
         {
             products ? (
                 products.map((item,index) => (
@@ -53,7 +53,7 @@ export default function ProductList() {
                         <ProductCard item = {item} key={index}/>
                     </Grid>
                 ))
-                ) : (<h1>loading...</h1>)
+                ) : (<h1>загрузка...</h1>)
         }
       </Grid>
       <Stack spacing={2}>

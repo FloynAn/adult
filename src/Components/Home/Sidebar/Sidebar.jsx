@@ -69,7 +69,7 @@ const Sidebar = () => {
 
     return (
         <div>
-        <Button onClick={handleOpen}>Open modal</Button>
+        <Button onClick={handleOpen}>Фильтры</Button>
         <Modal
         open={open}
         onClose={handleClose}
@@ -78,10 +78,10 @@ const Sidebar = () => {
       >
         <Box sx={style}>
             <Grid container spacing={2}>
-                <Grid item md={3}>
+                <Grid item md={12}>
                     <Paper elevation={2}>
                         <FormControl component='fieldset'>
-                            <FormLabel component='legend'>Type</FormLabel>
+                            <FormLabel component='legend'>Категории</FormLabel>
                             <RadioGroup 
                                 aria-label='gender' 
                                 name='gender1' 
@@ -89,19 +89,39 @@ const Sidebar = () => {
                                 onChange={(e)=>handleChangeType('type', e.target.value)}
                             >
                                 <FormControlLabel 
-                                    value='apple' 
+                                    value='accessories' 
                                     control={<Radio/>} 
-                                    label="Apple"
+                                    label="Белье и аксессуары"
+                                />
+                                <FormControlLabel 
+                                    value='games' 
+                                    control={<Radio/>} 
+                                    label="Игры"
+                                />
+                                <FormControlLabel 
+                                    value='cosmetics' 
+                                    control={<Radio/>} 
+                                    label="Интимная косметика"
+                                />
+                                <FormControlLabel 
+                                    value='condoms' 
+                                    control={<Radio/>} 
+                                    label="Презервативы"
                                 />
                                 <FormControlLabel
-                                     value='samsung' 
+                                     value='toys' 
                                      control={<Radio/>} 
-                                     label="Samsung"
+                                     label="Секс игрушки"
+                                 />
+                                <FormControlLabel
+                                     value='bdsm' 
+                                     control={<Radio/>} 
+                                     label="Фетиш и бДСМ"
                                  />
                                 <FormControlLabel
                                      value='all' 
                                      control={<Radio/>} 
-                                     label="All"
+                                     label="Все"
                                  />
                             </RadioGroup>
                         </FormControl>
