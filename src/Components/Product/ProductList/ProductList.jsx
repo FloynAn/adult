@@ -44,7 +44,7 @@ export default function ProductList() {
     }
 
   return (
-    <Box sx={{ flexGrow: 1, margin: 4}} style={{background: 'f4e0ec'}}>
+    <Box sx={{ flexGrow: 1, margin: 4 }} style={{backgroundColor: '#f4e0ec'}}>
       <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 8, md: 12}}>
         {
             products ? (
@@ -56,8 +56,8 @@ export default function ProductList() {
                 ) : (<h1>загрузка...</h1>)
         }
       </Grid>
-      <Stack spacing={2}>
-        <Pagination 
+      <Stack spacing={2} marginTop={5}>
+        <Pagination style={{display: "flex", justifyContent: "center"}}
           count={paginatedPages}
           onChange={handlePage}
           page={+page} 

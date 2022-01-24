@@ -141,14 +141,13 @@ keepMounted
       onClose={handleMenuClose} 
     > 
       <Link to='/login'> 
-        <MenuItem>Login</MenuItem> 
+        <MenuItem>Войти</MenuItem> 
       </Link> 
  
       <Link to='/register'> 
-        <MenuItem>Register</MenuItem> 
+        <MenuItem>Зарегистрироваться</MenuItem> 
       </Link> 
        
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem> 
     </Menu> 
   ); 
  
@@ -238,7 +237,7 @@ keepMounted
           ):(null)} 
           { 
             currentUser?( 
-              <LogoutIcon style={{color:"white", marginRight: '1%'}}
+              <LogoutIcon style={{color:"white", marginRight: '1%', cursor: "pointer"}}
               variant='success'  
               disabled={!currentUser}  
               onClick={handleLogout}
