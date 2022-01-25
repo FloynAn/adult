@@ -5,7 +5,7 @@ import ProductList from '../../Product/ProductList/ProductList';
 const Content = () => {
     return (
         <div>
-            <Grid item md={9}>
+            <Grid style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
                 <ProductList/>
             </Grid>
         </div>
