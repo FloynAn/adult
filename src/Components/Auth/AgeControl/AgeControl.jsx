@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useNavigate } from 'react-router-dom';
-import { productContext } from '../../../Contexts/ProductsContext';
 
 const style = {
   position: 'absolute',
@@ -15,7 +14,7 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p: 4
 };
 
 export default function AgeControl() {
@@ -37,9 +36,10 @@ export default function AgeControl() {
 
           if(action) {
               setIsAdult(true)
-               
+               console.log('++++++++++');
           } else {
               setIsAdult(false)
+              console.log('---------');
           }
           handleCloseAgeControl()
       }
@@ -52,7 +52,7 @@ export default function AgeControl() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} style={{textAlign: 'center'}}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Вам уже есть 18 лет?
           </Typography>
