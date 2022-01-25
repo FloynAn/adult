@@ -259,8 +259,11 @@ keepMounted
             > 
               <AccountCircle /> 
  
-                </IconButton> 
-                {currentUser?.email !== "admin@gmail.com" ? ( 
+                </IconButton>
+
+                
+
+                {currentUser?.email !== "admin@gmail.com" && currentUser !== null ? ( 
                 <Link to="/cart" style={{color:"white"}}> 
                   <IconButton color='inherit'> 
               <Badge badgeContent={cartLength} color='secondary'> 
@@ -268,7 +271,10 @@ keepMounted
               </Badge> 
             </IconButton> 
           </Link> 
-                ) : (null)} 
+                ) : (null)}
+
+
+
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}> 
           </Box> 
  
