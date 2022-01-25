@@ -45,9 +45,8 @@ export default function ProductList() {
     }
 
   return (
-     <>
-
-     <AgeControl />
+    <>
+    <AgeControl/>
     <Box sx={{ flexGrow: 1, margin: 4 }} style={{backgroundColor: '#f4e0ec'}}>
       <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 2, sm: 8, md: 12}}>
         {
@@ -68,8 +67,7 @@ export default function ProductList() {
         />
       </Stack>
     </Box>
-
-</>
+    </>
   );
 }
 
