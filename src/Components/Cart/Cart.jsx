@@ -13,8 +13,8 @@ import { calcTotalPrice } from '../../Helpers/CalcPrice';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+    backgroundColor: '#f4e0ec',
+    color: 'purple',
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
@@ -31,18 +31,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-// function createData(name, calories, fat, carbs, protein) {
-//   return { name, calories, fat, carbs, protein };
-// }
-
-// const rows = [
-//   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-//   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-//   createData('Eclair', 262, 16.0, 24, 6.0),
-//   createData('Cupcake', 305, 3.7, 67, 4.3),
-//   createData('Gingerbread', 356, 16.0, 49, 3.9),
-// ];
-
 
 
 export default function Cart() {
@@ -58,11 +46,12 @@ export default function Cart() {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Image</StyledTableCell>
-            <StyledTableCell align="right">Title</StyledTableCell>
-            <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Count</StyledTableCell>
-            <StyledTableCell align="right">SubPrice</StyledTableCell>
+            <StyledTableCell align="center">Фото</StyledTableCell>
+            <StyledTableCell align="center">Наименование</StyledTableCell>
+            <StyledTableCell align="center">Цена</StyledTableCell>
+            <StyledTableCell align="center">Количество</StyledTableCell>
+            <StyledTableCell align="center">Итого</StyledTableCell>
+            <StyledTableCell align="center">Удалить</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -70,33 +59,36 @@ export default function Cart() {
                 <>
                     {cart.products.map((elem) => (
                         <StyledTableRow key={elem.item.id}>
-                        <StyledTableCell component="th" scope="row">
+                        <StyledTableCell component="th" scope="row" align="center">
                             <img width='30px' src={elem.item.image} alt={elem.item.title} />
                         </StyledTableCell>
-                        <StyledTableCell align="right">{elem.item.title}</StyledTableCell>
-                        <StyledTableCell align="right">{elem.item.price}</StyledTableCell>
-                        <StyledTableCell align="right">
+                        <StyledTableCell align="center">{elem.item.title}</StyledTableCell>
+                        <StyledTableCell align="center">{elem.item.price}</StyledTableCell>
+                        <StyledTableCell align="center">
                             <input 
                             type="number" 
                             value={elem.count}
                             min='0'
                             onChange={(e) => changeProductCount(e.target.value, elem.item.id)} />
                         </StyledTableCell>
-                        <StyledTableCell align="right">{elem.subPrice}</StyledTableCell>
+                        <StyledTableCell align="center">{elem.subPrice}</StyledTableCell>
+                        <StyledTableCell align='center'>
+                          <Button style={{color: 'red'}}>&times;</Button>
+                        </StyledTableCell>
                         </StyledTableRow>
                     ))}
                 </>
             ): (
                 <TableRow>
                     <TableCell>
-                        <h1>Loading...</h1>
+                        <h1>Загрузка...</h1>
                     </TableCell>
                 </TableRow>
                 )}
             <TableRow>
                 <TableCell rowSpan={3} />
                 <TableCell colSpan={2}>
-                    <Typography variant='h5'>Total:</Typography>
+                    <Typography variant='h5'>Всего:</Typography>
                 </TableCell>
                 {
                     cart.products ? (
@@ -110,8 +102,8 @@ export default function Cart() {
             </TableRow>
             <TableRow>
                 <TableCell colSpan={3} align='right'>
-                    <Button variant='contained' color='primary'>
-                        BUY
+                    <Button variant='contained' color='secondary'>
+                        КУПИТЬ
                     </Button>
                 </TableCell>
             </TableRow>
