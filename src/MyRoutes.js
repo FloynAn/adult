@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddProduct from './Components/Admin/AddProduct/AddProduct';
 import EditProduct from './Components/Admin/EditProduct/EditProduct';
+import AgeControl from './Components/Auth/AgeControl/AgeControl';
 import Login from './Components/Auth/Login/Login';
 import Register from './Components/Auth/Register/Register';
 import Cart from './Components/Cart/Cart';
@@ -21,6 +22,7 @@ const MyRoutes = () => {
                 <MyNavbar/>
 
                         <Routes>
+                            <Route path='/age' element={<AgeControl/>} />
                             <Route path='/add' element={<AddProduct/>} />
                             <Route path='/' element={<Home/>} />
                             <Route path='/cart' element={<Cart/>} />
@@ -28,7 +30,6 @@ const MyRoutes = () => {
                             <Route path='/detail/:id' element={<ProductDetail/>} />
                             <Route path='/register' element={<Register/>} />
                             <Route path='/login' element={<Login/>} />
-                            
                         </Routes>
 
             </BrowserRouter>
