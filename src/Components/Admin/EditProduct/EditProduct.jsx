@@ -82,7 +82,7 @@ export default function EditProduct() {
                                 onChange={handleEditInp} 
                                 value={values.title} 
                                 variant='outlined' 
-                                label='Title' 
+                                label='Наименование' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -90,7 +90,7 @@ export default function EditProduct() {
                                 onChange={handleEditInp} 
                                 value={values.image} 
                                 variant='outlined' 
-                                label='Image' 
+                                label='Фото' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -98,7 +98,7 @@ export default function EditProduct() {
                                 onChange={handleEditInp} 
                                 value={values.type} 
                                 variant='outlined' 
-                                label='Type' 
+                                label='Категория' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -106,7 +106,7 @@ export default function EditProduct() {
                                 onChange={handleEditInp} 
                                 value={values.price} 
                                 variant='outlined' 
-                                label='Price' 
+                                label='Цена' 
                             />
                             <TextField 
                                 style={{padding:'10px'}} 
@@ -114,16 +114,16 @@ export default function EditProduct() {
                                 onChange={handleEditInp} 
                                 value={values.description} 
                                 variant='outlined' 
-                                label='Description' 
+                                label='Описание' 
                             />
                         </form>
                             <Link to='/'>     
                                 <Button 
                                 onClick={handleSave}
                                 variant='contained' 
-                                color='success'
+                                color='secondary'
                             >
-                                Save
+                                Сохранить изменения
                             </Button></Link>
                             
                        

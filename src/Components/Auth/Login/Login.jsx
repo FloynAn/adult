@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { productContext } from '../../../Contexts/ProductsContext';
 import { Link, useNavigate } from 'react-router-dom';
+import AgeControl from '../AgeControl/AgeControl';
 
 
 
@@ -65,6 +66,7 @@ export default function Login() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+          
         <Box
           sx={{
             marginTop: 8,
@@ -114,11 +116,7 @@ export default function Login() {
               Войти
             </Button>
             <Grid container>
-              {/* <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid> */}
+
               <Grid item>
               <Link to='/register'>
                   Нет аккаунта? Зарегистрироваться
@@ -129,6 +127,7 @@ export default function Login() {
         </Box>
         {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
       </Container>
+      
     </ThemeProvider>
   );
 }
