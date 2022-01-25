@@ -216,8 +216,6 @@ const ProductsContextProvider = ({children}) => {
         
         return currentUser
     }
-    
-
 
     return (
         <productContext.Provider value={{

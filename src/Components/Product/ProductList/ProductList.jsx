@@ -8,6 +8,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { useSearchParams } from 'react-router-dom';
+import AgeControl from '../../Auth/AgeControl/AgeControl';
 
 
 const Item = styled(Paper)(({ theme }) => ({

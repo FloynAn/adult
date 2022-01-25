@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { useNavigate } from 'react-router-dom';
+import { productContext } from '../../../Contexts/ProductsContext';
 
 const style = {
   position: 'absolute',
@@ -17,24 +19,44 @@ const style = {
 };
 
 export default function AgeControl() {
-  const [open, setOpen] = React.useState(true);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
+
+    const [open, setOpen] = React.useState(true);
+
+    const navigate = useNavigate()
+
+    const handleCloseAgeControl = () => {
+        setOpen(false)
+        navigate('/')
+    }
+
+    const [isAdult, setIsAdult] = React.useState(false);
+    
+    
+    function checkIsAdult (action) {
+
+          if(action) {
+              setIsAdult(true)
+               
+          } else {
+              setIsAdult(false)
+          }
+          handleCloseAgeControl()
+      }
 
   return (
     <div>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={handleCloseAgeControl}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Есть 18?
+            Вам уже есть 18 лет?
           </Typography>
-          <Button onClick={handleClose}>Да</Button>          <Button onClick={handleClose}>Нет</Button>
-
+          <Button onClick={checkIsAdult}>Да</Button>          <Button onClick={handleCloseAgeControl}>Нет</Button>
         </Box>
       </Modal>
     </div>
