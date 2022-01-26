@@ -8,7 +8,6 @@ import ProductCard from '../ProductCard/ProductCard';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { useSearchParams } from 'react-router-dom';
-import AgeControl from '../../Auth/AgeControl/AgeControl';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -19,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ProductList() {
-    const {products, getProducts, paginatedPages} = React.useContext (productContext)
+    const {products, getProducts, paginatedPages, checkIsAdult } = React.useContext (productContext)
     
     const [searchParams, setSearchParams] = useSearchParams()
 
@@ -46,27 +45,27 @@ export default function ProductList() {
 
   return (
     <>
-    <AgeControl/>
-    <Box sx={{ flexGrow: 1, margin: 4 }} style={{backgroundColor: '#f4e0ec'}}>
-      <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 2, sm: 8, md: 12}}>
-        {
-            products ? (
-                products.map((item,index) => (
-                    <Grid item xs={2} sm={4} md={4} key={index}>
-                        <ProductCard item = {item} key={index}/>
-                    </Grid>
-                ))
-                ) : (<h1>загрузка...</h1>)
-        }
-      </Grid>
-      <Stack spacing={2} marginTop={5}>
-        <Pagination style={{display: "flex", justifyContent: "center"}}
-          count={paginatedPages}
-          onChange={handlePage}
-          page={+page} 
-        />
-      </Stack>
-    </Box>
+      
+        <Box sx={{ flexGrow: 1, margin: 4 }} style={{backgroundColor: '#f4e0ec'}}>
+          <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 2, sm: 8, md: 12}}>
+            {
+                products ? (
+                    products.map((item,index) => (
+                        <Grid item xs={2} sm={4} md={4} key={index}>
+                            <ProductCard item = {item} key={index}/>
+                        </Grid>
+                    ))
+                    ) : (<h1>загрузка...</h1>)
+            }
+          </Grid>
+          <Stack spacing={2} marginTop={5}>
+            <Pagination style={{display: "flex", justifyContent: "center"}}
+              count={paginatedPages}
+              onChange={handlePage}
+              page={+page} 
+            />
+          </Stack>
+        </Box>
     </>
   );
 }
