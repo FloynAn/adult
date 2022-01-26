@@ -5,6 +5,7 @@ import EditProduct from './Components/Admin/EditProduct/EditProduct';
 import Login from './Components/Auth/Login/Login';
 import Register from './Components/Auth/Register/Register';
 import Cart from './Components/Cart/Cart';
+import PaymentForm from './Components/Cart/PaymentForm';
 import MyNavbar from './Components/Header/MyNavbar';
 import Home from './Components/Home/Home';
 import ProductDetail from './Components/Product/ProductDetail/ProductDetail';
@@ -26,6 +27,7 @@ const MyRoutes = () => {
                             <Route path='/detail/:id' element={<ProductDetail/>} />
                             <Route path='/register' element={<Register/>} />
                             <Route path='/login' element={<Login/>} />
+                            <Route path='/payment' element={<PaymentForm/>}/>
                         </Routes>
 
             </BrowserRouter>
