@@ -38,6 +38,7 @@ export default function Cart() {
     const { cart, getCart, changeProductCount} = React.useContext(productContext)
     React.useEffect(()=>{
         getCart()
+        localStorage.clear()
     }, [])
 
 
