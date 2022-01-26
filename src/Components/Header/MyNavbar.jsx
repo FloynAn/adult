@@ -249,7 +249,7 @@ keepMounted
                Log out 
               </LogoutIcon> 
             ) : (null) 
-          } 
+          }  
           {currentUser?.email} 
  
             <IconButton 

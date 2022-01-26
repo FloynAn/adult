@@ -30,16 +30,14 @@ export default function AgeControl() {
     }
 
     const [isAdult, setIsAdult] = React.useState(false);
-    
-    
+
     function checkIsAdult (action) {
 
           if(action) {
-              setIsAdult(true)
-               console.log('++++++++++');
+              setIsAdult (true)
+            //    console.log('++++++++++');
           } else {
-              setIsAdult(false)
-              console.log('---------');
+              setIsAdult (false)
           }
           handleCloseAgeControl()
       }
@@ -56,9 +54,14 @@ export default function AgeControl() {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Вам уже есть 18 лет?
           </Typography>
-          <Button onClick={checkIsAdult}>Да</Button>          <Button onClick={handleCloseAgeControl}>Нет</Button>
+          <Button onClick={checkIsAdult}>Да</Button>          
+          <Button onClick={handleCloseAgeControl}>Нет</Button>
         </Box>
       </Modal>
+        {/* <ProductCard
+            isAdult ={isAdult}
+            checkIsAdult={checkIsAdult}
+        /> */}
     </div>
   );
 }
