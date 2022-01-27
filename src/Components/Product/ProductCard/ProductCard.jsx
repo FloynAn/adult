@@ -17,10 +17,9 @@ export default function ProductCard({item}) {
 
   const {deleteProduct, addProductInCart, checkProductInCart, useAuth} = React.useContext(productContext)
   const currentUser = useAuth()
-  console.log(currentUser);
 
   let icons = (
-    <CardActions disableSpacing style={{display: 'flex', justifyContent:'space-between'}}>
+    <CardActions disableSpacing style={{display: 'flex', justifyContent:'right'}}>
 
       
             {currentUser?.email === "admin@gmail.com" ? ( 
@@ -47,31 +46,31 @@ export default function ProductCard({item}) {
          <ShoppingCartIcon/>
          </IconButton>
          </>
-
-    
        }
     </CardActions>
   )
   return (
-    <Card sx={{ maxWidth: 400, maxHeight: 500 }} style={{margin:'10%'}}>
+    <Card sx={{ maxWidth: 400, maxHeight: 500 }} style={{margin:'10%', paddingBottom:'20px'}}>
       <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
         <CardMedia
           component="img"
-          height="250"
+          sx={{objectFit:'scale-down'}}
+          height='250'
           image={item.image}
           alt="18+"
+          style={{marginTop:'20px'}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" color='secondary' fontWeight='medium'>
+          <Typography gutterBottom variant="h5" component="div" color='secondary' fontWeight='bold' align="center">
             {item.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary" fontSize='16px' height='55px'>
+          <Typography variant="body2" color="text.secondary" fontSize='16px' height='55px' align="center">
             {item.description}
           </Typography>
         </CardContent>
       </Link>
       <CardContent>
-        <Typography fontSize="18px">${item.price}</Typography>
+        <Typography fontSize="25px" align="center">${item.price}</Typography>
         {icons}
       </CardContent>
     </Card>

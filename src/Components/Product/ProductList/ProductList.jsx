@@ -9,7 +9,6 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { useSearchParams } from 'react-router-dom';
 
-
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(2),
@@ -45,7 +44,6 @@ export default function ProductList() {
 
   return (
     <>
-      
         <Box sx={{ flexGrow: 1, margin: 4 }} style={{backgroundColor: '#f4e0ec'}}>
           <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 2, sm: 8, md: 12}}>
             {

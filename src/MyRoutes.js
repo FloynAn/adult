@@ -13,12 +13,10 @@ import ProductsContextProvider from './Contexts/ProductsContext';
 
 const MyRoutes = () => {
 
-
     return (
         <ProductsContextProvider>
             <BrowserRouter>
                 <MyNavbar/>
-
                         <Routes>
                             <Route path='/add' element={<AddProduct/>} />
                             <Route path='/' element={<Home/>} />
@@ -29,9 +27,8 @@ const MyRoutes = () => {
                             <Route path='/login' element={<Login/>} />
                             <Route path='/payment' element={<PaymentForm/>}/>
                         </Routes>
-
             </BrowserRouter>
-            </ProductsContextProvider>
+        </ProductsContextProvider>
     );
 };
 

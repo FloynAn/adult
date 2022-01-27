@@ -13,8 +13,8 @@ const ProductDetail = () => {
 
     return (
               <Paper variant="outlined">
-                    <Typography variant='h2' style={{textAlign:'center'}}>
-                        Описание
+                    <Typography variant='h4' style={{textAlign:'center', color:'purple', marginTop: '20px'}}>
+                        ОПИСАНИЕ
                     </Typography>
                     {
                         detail? (
@@ -24,19 +24,19 @@ const ProductDetail = () => {
                                 alignItems:'center'
                             }}>
                                 <div>
-                                    <img width='500px' src={detail.image} alt={detail.title} />
+                                    <img width='250px' src={detail.image} alt={detail.title} />
                                 </div>
                                 <div style = {{
                                     width: '450px',
                                     display: 'flex', 
                                     flexDirection: 'column',
-                                    alignItems: 'flex-start',
+                                    alignItems: 'center',
                                     justifyContent: 'center'
                                 }}>
-                                    <Typography variant='h3'>{detail.title}</Typography>
+                                    <Typography style={{color:'violet'}} variant='h3'>{detail.title}</Typography>
                                     <Typography variant='subtitle1'>{detail.type}</Typography>
                                     <Typography variant='body1'>{detail.description}</Typography>
-                                    <Typography variant='h4'>${detail.price}</Typography>
+                                    <Typography variant='h3'>${detail.price}</Typography>
                                 </div>
                             </div>
                         ) : (<h1>Loading...</h1>)
