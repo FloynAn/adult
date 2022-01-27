@@ -169,26 +169,6 @@ keepMounted
       open={isMobileMenuOpen} 
       onClose={handleMobileMenuClose} 
     > 
-      <MenuItem> 
-        {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit"> 
-          <Badge badgeContent={4} color="error"> 
-            <MailIcon /> 
-          </Badge> 
-        </IconButton> 
-        <p>Messages</p> 
-      </MenuItem> 
-      <MenuItem> 
-        <IconButton 
-          size="large" 
-          aria-label="show 17 new notifications" 
-          color="inherit" 
-        > 
-          <Badge badgeContent={17} color="error"> 
-            <NotificationsIcon /> 
-          </Badge> 
-        </IconButton> */} 
-        {/* <p>Notifications</p>  */}
-      </MenuItem> 
       <MenuItem onClick={handleProfileMenuOpen}> 
         <IconButton 
           size="large" 
@@ -263,11 +243,7 @@ keepMounted
               color="inherit" 
             > 
               <AccountCircle /> 
- 
                 </IconButton>
-
-                
-
                 {currentUser?.email !== "admin@gmail.com" && currentUser !== null ? ( 
                 <Link to="/cart" style={{color:"white"}}> 
                   <IconButton color='inherit'> 
@@ -277,12 +253,8 @@ keepMounted
             </IconButton> 
           </Link> 
                 ) : (null)}
-
-
-
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}> 
           </Box> 
- 
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}> 
             <IconButton 
               size="large" 
