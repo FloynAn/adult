@@ -62,16 +62,16 @@ export default function ProductCard({item}) {
           alt="18+"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div" color='secondary' fontWeight='medium'>
             {item.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" fontSize='16px' height='55px'>
             {item.description}
           </Typography>
         </CardContent>
       </Link>
       <CardContent>
-        <Typography size="small">${item.price}</Typography>
+        <Typography fontSize="18px">${item.price}</Typography>
         {icons}
       </CardContent>
     </Card>
