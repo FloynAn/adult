@@ -17,7 +17,6 @@ export default function ProductCard({item}) {
 
   const {deleteProduct, addProductInCart, checkProductInCart, useAuth} = React.useContext(productContext)
   const currentUser = useAuth()
-  console.log(currentUser);
 
   let icons = (
     <CardActions disableSpacing style={{display: 'flex', justifyContent:'space-between'}}>
@@ -47,8 +46,6 @@ export default function ProductCard({item}) {
          <ShoppingCartIcon/>
          </IconButton>
          </>
-
-    
        }
     </CardActions>
   )
