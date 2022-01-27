@@ -69,7 +69,7 @@ const Sidebar = () => {
 
     return (
         <div>
-        <Button onClick={handleOpen}>Фильтры</Button>
+        <Button style={{color: 'violet', marginTop: '10px', marginLeft:'25px'}} onClick={handleOpen}>...ФИЛЬТРЫ...</Button>
         <Modal
         open={open}
         onClose={handleClose}
@@ -130,7 +130,7 @@ const Sidebar = () => {
                             onChange={(e) => filterProducts
                             ('price_lte', e.target.value)}
                             valueLabelDisplay='auto'
-                            max={30000}
+                            max={20000}
                             step={100}
                            
                             />

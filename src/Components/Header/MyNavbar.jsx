@@ -142,11 +142,11 @@ keepMounted
       onClose={handleMenuClose} 
     > 
       <Link to='/login'> 
-        <MenuItem>Войти</MenuItem> 
+        <MenuItem style={{color: 'purple'}}>Войти</MenuItem> 
       </Link> 
  
       <Link to='/register'> 
-        <MenuItem>Зарегистрироваться</MenuItem> 
+        <MenuItem style={{color: 'purple'}}>Зарегистрироваться</MenuItem> 
       </Link> 
        
     </Menu> 
@@ -189,7 +189,7 @@ keepMounted
  
       <AppBar position="static" color="secondary"> 
         <Toolbar> 
-          <Typography 
+          <Typography
             variant="h6" 
             noWrap 
             component="div" 
@@ -198,8 +198,10 @@ keepMounted
           > 
 
           <Link to="/">
+
           <img width='230px' src={Logo} alt="logo" />
           </Link> 
+
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
