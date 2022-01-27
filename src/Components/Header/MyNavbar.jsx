@@ -219,7 +219,8 @@ keepMounted
 
           <Link to="/">
           <img width='115px' src={Logo} alt="logo" />
-          </Link> 
+          </Link>
+
 
           </Typography> 
           <Search> 
