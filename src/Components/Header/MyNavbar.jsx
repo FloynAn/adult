@@ -85,6 +85,7 @@ export default function MyNavbar() {
 
   async function handleLogout (){
     try {
+      localStorage.clear()
       await logout()
     } catch (error) {
       console.log(error);

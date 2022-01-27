@@ -17,6 +17,8 @@ import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
 import { Link } from 'react-router-dom';
 
+
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: '#f4e0ec',
@@ -37,31 +39,30 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+// const style = {
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   width: 400,
+//   bgcolor: 'background.paper',
+//   border: '2px solid #000',
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 
 
 export default function Cart() {
 
-    const { cart, getCart, changeProductCount} = React.useContext(productContext)
+    const { cart, getCart, changeProductCount, deleteFromCart} = React.useContext(productContext)
     React.useEffect(()=>{
         getCart()
-        localStorage.clear()
     }, [])
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  // const [open, setOpen] = React.useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
   
 
 
@@ -95,11 +96,14 @@ export default function Cart() {
                             type="number" 
                             value={elem.count}
                             min='0'
-                            onChange={(e) => changeProductCount(e.target.value, elem.item.id)} />
+                            onChange={(e) => changeProductCount(e.target.value, elem.item.id)}
+                            
+                            />
                         </StyledTableCell>
                         <StyledTableCell align="center">{elem.subPrice}</StyledTableCell>
                         <StyledTableCell align='center'>
-                          <Button style={{color: 'red'}}>&times;</Button>
+                        
+                          <Button onClick={e => deleteFromCart(elem.item.id, elem.item.price)} style={{color: 'red'}}>&times;</Button>
                         </StyledTableCell>
                         </StyledTableRow>
                     ))}
@@ -129,7 +133,7 @@ export default function Cart() {
             <TableRow>
                 <TableCell colSpan={3} align='right'>
                   <Link to='/payment'>
-                    <Button onClick={handleOpen} variant='contained' color='secondary'>
+                    <Button variant='contained' color='secondary'>
                         КУПИТЬ
                     </Button>
                   </Link >
@@ -139,7 +143,7 @@ export default function Cart() {
       </Table>
     </TableContainer>
 
-    <Modal
+    {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -147,7 +151,7 @@ export default function Cart() {
       >
         
         <PaymentForm ></PaymentForm>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

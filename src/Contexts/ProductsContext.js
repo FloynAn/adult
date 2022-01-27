@@ -182,6 +182,28 @@ const ProductsContextProvider = ({children}) => {
     } 
 
 
+    //! DeleteFromCart 
+ 
+    const deleteFromCart =(id, price)=>{ 
+        let items = JSON.parse(localStorage.getItem('cart')) 
+        for (let i =0; i< items.products.length; i++) { 
+          let targetItem = JSON.parse(items.products[i].item.id); 
+          let targetItemPrice = JSON.parse(items.products[i].item.price); 
+           
+          if (targetItem == id) { 
+              items.products.splice(i, 1); 
+          } 
+          if (targetItemPrice == price){ 
+            items.totalPrice = items.totalPrice - price 
+          } 
+    } 
+      items = JSON.stringify(items); 
+      console.log(items) 
+      localStorage.setItem("cart", items); 
+      getCart() 
+    }
+
+
     const getDetail = async(id) => {
         const res = await axios(`${API}/${id}`)
         let action = {
@@ -190,6 +212,8 @@ const ProductsContextProvider = ({children}) => {
         }
         dispatch(action)
     }
+
+
 
     //! SIGN IN / SIGN UP
     function signUp(email, password){
@@ -234,6 +258,7 @@ const ProductsContextProvider = ({children}) => {
             signIn,
             useAuth,
             logout,
+            deleteFromCart,
             products: state.products,
             edit: state.edit,
             paginatedPages: state.paginatedPages,
