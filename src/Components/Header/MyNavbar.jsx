@@ -198,8 +198,10 @@ keepMounted
           > 
 
           <Link to="/">
-          <img width='115px' src={Logo} alt="logo" />
-          </Link>
+
+          <img width='230px' src={Logo} alt="logo" />
+          </Link> 
+
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
