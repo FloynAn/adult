@@ -116,7 +116,7 @@ const Sidebar = () => {
                                 <FormControlLabel
                                      value='bdsm' 
                                      control={<Radio/>} 
-                                     label="Фетиш и бДСМ"
+                                     label="Фетиш и БДСМ"
                                  />
                                 <FormControlLabel
                                      value='all' 

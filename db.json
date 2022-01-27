@@ -1,8 +1,8 @@
 {
   "products": [
     {
-      "title": "Блестки для жопы",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "title": "Блестки",
+      "image": "https://shop-cdn1.vigbo.tech/shops/182822/products/20322491/images/2-cc8de1d761b1263e1e8c61e41d363adb.jpg",
       "price": 1000,
       "type": "cosmetics",
       "description": "Потрясающие блестки в форме звездочек сделают любой секс незабываемым",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Секс путеводитель",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBm8lv9dMzrJAuQFzSCyYbAU-jcWpsNYLhqQ&usqp=CAU",
+      "image": "https://cdn1.ozone.ru/s3/multimedia-l/6063469533.jpg",
       "price": 800,
       "type": "games",
       "description": "Уникальный дневник и планировщик ваших приключений в постели",
@@ -31,6 +31,14 @@
       "type": "condoms",
       "description": "Реалистичная текстура имитирует естественную смазку. 200 мл",
       "id": 4
+    },
+    {
+      "title": "Лисий хвост",
+      "image": "https://cdn1.ozone.ru/s3/multimedia-m/c1200/6042485602.jpg",
+      "price": 6000,
+      "type": "toys",
+      "description": "Шикарный хвост, который совмещает в себе не только функционал, но и неповторимый дизайн",
+      "id": 5
     }
   ]
 }
