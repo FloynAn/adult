@@ -39,6 +39,14 @@
       "type": "toys",
       "description": "Шикарный хвост, который совмещает в себе не только функционал, но и неповторимый дизайн",
       "id": 5
+    },
+    {
+      "title": "Набор для БДСМ игр",
+      "image": "https://nedlyaskuki.com.ua/upload/iblock/d20/d20de0894140eda000db3578f1c848d3.jpg",
+      "price": 1500,
+      "type": "bdsm",
+      "description": "Настоящий Must Have, который должен быть в арсенале любовных игр",
+      "id": 6
     }
   ]
 }
