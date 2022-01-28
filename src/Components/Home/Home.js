@@ -66,7 +66,7 @@ const Home = () => {
             </Modal>
 
             <Grid spacing-md={3} spacing-sm={3}>
-                {isAdult ?  (<><Sidebar/><Content/></>) : (<></>)
+                {isAdult ?  (<><Sidebar/><Content/></>) : (<h1 style={{textAlign: 'center', color: 'purple'}}>Только для лиц, достигших 18 лет</h1>)
                 }
             </Grid>
             
