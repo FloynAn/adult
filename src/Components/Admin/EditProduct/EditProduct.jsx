@@ -49,14 +49,14 @@ export default function EditProduct() {
         flexWrap: 'wrap',
         '& > :not(style)': {
           m: '40px auto',
-          maxwidth: 1000,
+        //   maxwidth: 1000,
           height: 'auto',
           p: '10px'
         },
       }}
     >
         <Paper elevation={3}>
-            <h1 style={{textAlign:'center'}}>Update product</h1>
+            <h1 style={{textAlign:'center', color:'purple'}}>ИЗМЕНИТЬ</h1>
             <div style={{display:'flex', justifyContent: 'space-around', color:'black'}}>
                 <div>
                     <img width='300' src={values.image} alt="product image" />
@@ -117,7 +117,7 @@ export default function EditProduct() {
                                 label='Описание' 
                             />
                         </form>
-                            <Link to='/'>     
+                            <Link to='/' style={{textDecoration:'none'}}>     
                                 <Button 
                                 onClick={handleSave}
                                 variant='contained' 
