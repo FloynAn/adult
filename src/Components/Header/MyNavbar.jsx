@@ -272,7 +272,7 @@ keepMounted
               </LogoutIcon> 
             ) : (null) 
           } 
-          <Box sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}>
+          <Box style={{marginBottom: '5px'}} sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}>
           {currentUser?.email} 
             </Box> 
  
