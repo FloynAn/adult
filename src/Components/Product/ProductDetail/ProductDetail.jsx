@@ -33,7 +33,7 @@ const ProductDetail = () => {
                                     alignItems: 'center',
                                     justifyContent: 'center'
                                 }}>
-                                    <Typography style={{color:'violet'}} variant='h3'>{detail.title}</Typography>
+                                    <Typography style={{color:'violet'}} variant='h3' sx={{ display: { fontSize:'30px' } }}>{detail.title}</Typography>
                                     <Typography variant='subtitle1'>{detail.type}</Typography>
                                     <Typography variant='body1'>{detail.description}</Typography>
                                     <Typography variant='h3'>${detail.price}</Typography>

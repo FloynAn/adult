@@ -50,27 +50,27 @@ export default function ProductCard({item}) {
     </CardActions>
   )
   return (
-    <Card sx={{ maxWidth: 400, maxHeight: 500 }} style={{margin:'10%', paddingBottom:'20px'}}>
+    <Card sx={{ maxWidth: 400, maxHeight: 520 }} style={{margin:'10%', paddingBottom:'20px'}}>
       <Link to={`/detail/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
         <CardMedia
           component="img"
           sx={{objectFit:'scale-down'}}
-          height='250'
+          height='230'
           image={item.image}
           alt="18+"
           style={{marginTop:'20px'}}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div" color='secondary' fontWeight='bold' align="center">
+        <CardContent >
+          <Typography  gutterBottom variant="h5" component="div" color='secondary' fontWeight='bold' align="center">
             {item.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary" fontSize='16px' height='55px' align="center">
+          <Typography marginBottom='7px' variant="body2" color="text.secondary" fontSize='16px' height='50px' align="center">
             {item.description}
           </Typography>
         </CardContent>
       </Link>
       <CardContent>
-        <Typography fontSize="25px" align="center">${item.price}</Typography>
+        <Typography marginTop='30px' fontSize="25px" align="center">${item.price}</Typography>
         {icons}
       </CardContent>
     </Card>
