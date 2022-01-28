@@ -141,13 +141,14 @@ keepMounted
       open={isMenuOpen} 
       onClose={handleMenuClose} 
     > 
-      <Link to='/login'> 
+      <Link to='/login' style={{textDecoration:'none'}}> 
         <MenuItem style={{color: 'purple'}}>Войти</MenuItem> 
       </Link> 
  
-      <Link to='/register'> 
+      <Link to='/register'  style={{textDecoration:'none'}}> 
         <MenuItem style={{color: 'purple'}}>Зарегистрироваться</MenuItem> 
       </Link> 
+      
        
     </Menu> 
   ); 
@@ -170,6 +171,7 @@ keepMounted
       onClose={handleMobileMenuClose} 
     > 
       <MenuItem onClick={handleProfileMenuOpen}> 
+      <img width='130px' src={Logo} alt="logo" /> 
         <IconButton 
           size="large" 
           aria-label="account of current user" 
@@ -179,7 +181,7 @@ keepMounted
         > 
           <AccountCircle /> 
         </IconButton> 
-        <p>Profile</p> 
+        <p>Профиль</p>
       </MenuItem> 
     </Menu> 
   ); 
@@ -198,10 +200,8 @@ keepMounted
           > 
 
           <Link to="/">
-
           <img width='230px' src={Logo} alt="logo" />
           </Link> 
-
           </Typography> 
           <Search> 
             <SearchIconWrapper> 
@@ -228,7 +228,7 @@ keepMounted
               disabled={!currentUser}  
               onClick={handleLogout}
               > 
-               Log out 
+               Выйти 
               </LogoutIcon> 
             ) : (null) 
           }  
