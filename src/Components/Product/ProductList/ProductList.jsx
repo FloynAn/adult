@@ -44,7 +44,7 @@ export default function ProductList() {
 
   return (
     <>
-        <Box sx={{ flexGrow: 1, margin: 4 }} style={{backgroundColor: '#f4e0ec'}}>
+        <Box sx={{ flexGrow: 1, margin: 4, marginTop: 1  }} style={{backgroundColor: '#f4e0ec', paddingBottom:'20px'}}>
           <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 2, sm: 8, md: 12}}>
             {
                 products ? (
