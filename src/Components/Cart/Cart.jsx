@@ -131,7 +131,7 @@ export default function Cart() {
             </TableRow>
             <TableRow>
                 <TableCell colSpan={3} align='right'>
-                  <Link to='/payment'>
+                  <Link to='/payment' style={{textDecoration:'none'}}>
                     <Button variant='contained' color='secondary'>
                         КУПИТЬ
                     </Button>

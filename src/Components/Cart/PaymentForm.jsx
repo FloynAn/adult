@@ -69,8 +69,13 @@ export default class PaymentForm extends React.Component {
             onFocus={this.handleInputFocus}
             style={{ margin: '10px'}}
           />
-          <Link to='/'>
-        <Button style={{teaxtAlign: 'center', marginTop: '10px'}} variant='contained' color='secondary'>Оплатить</Button>
+          <Link to='/' style={{textDecoration:'none'}}>
+            <Button 
+              style={{teaxtAlign: 'center', marginTop: '10px'}} 
+              variant='contained' color='secondary'
+              >
+                Оплатить
+              </Button>
           </Link>
         </form>
       </div>
