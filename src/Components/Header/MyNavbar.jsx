@@ -235,11 +235,11 @@ keepMounted
             noWrap 
             component="div" 
              
-            sx={{ display: { xs: 'none', sm: 'block' } }} 
+            sx={{ display: { xs: 'block', sm: 'block' } }} 
           > 
         
           <Link to="/">
-          <img width='230px' src={Logo} alt="logo"/>
+          <img width='230px' src={Logo} alt="logo" />
           </Link> 
          
           </Typography> 
