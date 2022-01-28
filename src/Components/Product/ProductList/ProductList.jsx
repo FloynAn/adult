@@ -56,7 +56,7 @@ export default function ProductList() {
                     ) : (<h1>загрузка...</h1>)
             }
           </Grid>
-          <Stack spacing={2} marginTop={5}>
+          <Stack spacing={2} marginTop={1}>
             <Pagination style={{display: "flex", justifyContent: "center"}}
               count={paginatedPages}
               onChange={handlePage}
