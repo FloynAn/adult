@@ -166,18 +166,61 @@ keepMounted
       open={isMobileMenuOpen} 
       onClose={handleMobileMenuClose} 
     > 
-      <MenuItem onClick={handleProfileMenuOpen}> 
-      <img width='130px' src={Logo} alt="logo" /> 
-        <IconButton 
-          size="large" 
-          aria-label="account of current user" 
-          aria-controls="primary-search-account-menu" 
-          aria-haspopup="true" 
-          color="inherit" 
-        > 
-          <AccountCircle /> 
-        </IconButton> 
-        <p>Профиль</p>
+      <MenuItem style={{display:'flex', flexDirection:'column'}} onClick={handleProfileMenuOpen}> 
+      <Search> 
+            <SearchIconWrapper> 
+              <SearchIcon /> 
+            </SearchIconWrapper> 
+            <StyledInputBase 
+              placeholder="Поиск..." 
+              inputProps={{ 'aria-label': 'search' }} 
+              value={searchVal} 
+              onChange={handleValue} 
+            /> 
+          </Search> 
+          
+          <IconButton 
+            size="large" 
+            aria-label="account of current user" 
+            aria-controls="primary-search-account-menu" 
+            aria-haspopup="true" 
+            color="inherit" 
+          > 
+            <AccountCircle /> 
+          </IconButton> 
+
+          {currentUser?.email} 
+          {/* <Box sx={{ flexGrow: 1 }} />  */}
+          {currentUser?.email ==="admin@gmail.com" ? ( 
+            <Link to="/add" style={{color:"violet", marginRight: '1%'}}> 
+              <AddIcon/> 
+            </Link> 
+          ):(null)} 
+          { 
+            currentUser?( 
+              <LogoutIcon style={{color:"violet", marginRight: '1%', cursor: "pointer"}}
+              variant='success'  
+              disabled={!currentUser}  
+              onClick={handleLogout}
+              > 
+               Выйти 
+              </LogoutIcon> 
+            ) : (null) 
+          }  
+ 
+           
+                {currentUser?.email !== "admin@gmail.com" && currentUser !== null ? ( 
+                <Link to="/cart" style={{color:"violet"}}> 
+                  <IconButton color='inherit'> 
+              <Badge badgeContent={cartLength} color='secondary'> 
+                <ShoppingCartIcon/> 
+              </Badge> 
+            </IconButton> 
+          </Link> 
+                ) : (null)}
+          {/* <Box sx={{ display: { xs: 'none', md: 'flex' } }}> 
+          </Box>  */}
+
       </MenuItem> 
     </Menu> 
   ); 
@@ -194,12 +237,13 @@ keepMounted
              
             sx={{ display: { xs: 'none', sm: 'block' } }} 
           > 
-
+        
           <Link to="/">
-          <img width='230px' src={Logo} alt="logo" />
+          <img width='230px' src={Logo} alt="logo"/>
           </Link> 
+         
           </Typography> 
-          <Search> 
+          <Search sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}> 
             <SearchIconWrapper> 
               <SearchIcon /> 
             </SearchIconWrapper> 
@@ -214,12 +258,12 @@ keepMounted
           <Box sx={{ flexGrow: 1 }} /> 
           {currentUser?.email ==="admin@gmail.com" ? ( 
             <Link to="/add" style={{color:"white", marginRight: '1%'}}> 
-              <AddIcon/> 
+              <AddIcon sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}/> 
             </Link> 
           ):(null)} 
           { 
             currentUser?( 
-              <LogoutIcon style={{color:"white", marginRight: '1%', cursor: "pointer"}}
+              <LogoutIcon sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }} style={{color:"white", marginRight: '1%', cursor: "pointer"}}
               variant='success'  
               disabled={!currentUser}  
               onClick={handleLogout}
@@ -227,10 +271,12 @@ keepMounted
                Выйти 
               </LogoutIcon> 
             ) : (null) 
-          }  
+          } 
+          <Box sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}>
           {currentUser?.email} 
+            </Box> 
  
-            <IconButton 
+            <IconButton sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}
               size="large" 
               edge="end" 
               aria-label="account of current user" 
@@ -244,8 +290,8 @@ keepMounted
                 {currentUser?.email !== "admin@gmail.com" && currentUser !== null ? ( 
                 <Link to="/cart" style={{color:"white"}}> 
                   <IconButton color='inherit'> 
-              <Badge badgeContent={cartLength} color='secondary'> 
-                <ShoppingCartIcon/> 
+              <Badge badgeContent={cartLength} color='secondary' sx={{ display: { xs: 'none', md: 'block', lg: 'block'} }}> 
+                <ShoppingCartIcon /> 
               </Badge> 
             </IconButton> 
           </Link> 
